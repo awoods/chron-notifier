@@ -63,7 +63,10 @@ public class MailUtil implements ServletContextListener {
         //TODO: Should manifest be converted to txt attachment rather than inline?
         message.setText(buildMsg(t, ir));
         
-        Transport.send(message);
+//        Transport.send(message);
+            LOG.info("Subject: "+ sb);
+            LOG.info("Ticket: "+ t);
+
         }
         catch (MessagingException e)
         {
